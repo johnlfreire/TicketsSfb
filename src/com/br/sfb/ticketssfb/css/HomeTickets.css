@@ -1,0 +1,19 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09/09/2018, 17:49:58
+    Author     : johnpc
+*/
+
+
+#imageMail{
+ -fx-graphic: url('../resource/NewMessage.png');
+ -fx-background-color: red;
+}
+#imageMail:hover{
+ -fx-graphic: url('../resource/Invite.png');
+ -fx-background-color: red;
+}

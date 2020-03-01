@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane prefHeight="710.0" prefWidth="1024.0" styleClass="panePrincipal" stylesheets="@../css/principal.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.br.sfb.ticketssfb.controle.DashboardController">
+   <left>
+      <ToolBar orientation="VERTICAL" prefHeight="645.0" prefWidth="82.0" style="-fx-background-color: #1B2838;" BorderPane.alignment="TOP_CENTER">
+         <items>
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#btTickets" prefHeight="96.0" prefWidth="72.0" style="-fx-background-color: #1B2838;" styleClass="sidebar_menu" text="Tickets" textFill="#f8f8f8">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/Two%20Tickets_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#btUsuario" prefHeight="96.0" prefWidth="63.0" style="-fx-background-color: #1B2838;" styleClass="sidebar_menu" text="Usuário" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/Male%20User_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#btRotulo" prefHeight="96.0" prefWidth="63.0" style="-fx-background-color: #1B2838;" styleClass="sidebar_menu" text="Rótulo" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/Price%20Tag_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="96.0" prefWidth="63.0" style="-fx-background-color: #1B2838;" styleClass="sidebar_menu" text="Equipes" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/Add%20User%20Group%20Woman%20Man_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="96.0" prefWidth="63.0" style="-fx-background-color: #1B2838;" styleClass="sidebar_menu" text="Definições" textFill="#f5f5f5">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/Administrative%20Tools_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </items>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ToolBar>
+   </left>
+   <top>
+      <StackPane prefHeight="65.0" prefWidth="1024.0" style="-fx-background-color: #2c405a;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #1B2838;" StackPane.alignment="CENTER_RIGHT">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#minimize" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/Minimize%20Window_20px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#maximize" prefHeight="16.0" prefWidth="18.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/Maximize%20Window_20px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#exit" prefHeight="21.0" prefWidth="36.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/Close%20Window_20px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets right="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+   </top>
+   <center>
+      <AnchorPane fx:id="paneCentral" prefHeight="625.0" prefWidth="942.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

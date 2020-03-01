@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/Tickets?createDatabaseIfNotExist=true</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">root</property>
+    <property name="hibernate.show_sql">false</property>
+    <property name="hibernate.format_sql"> false </property>
+    <!-- Configuração de validação do Banco de Dados na execução do sistema -->
+    <!-- É aqui que se informa se o banco será criado pelo Hibernate (create-drop) -->
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="javax.persistence.validation.mode">none</property>
+    <mapping class="com.br.sfb.ticketssfb.modelo.ModeloTicket"/>
+    <mapping class="com.br.sfb.ticketssfb.modelo.ModeloRotulo"/>
+    <mapping class="com.br.sfb.ticketssfb.modelo.ModeloUsuario"/>
+    <mapping class="com.br.sfb.ticketssfb.modelo.ModeloTime"/>
+  </session-factory>
+</hibernate-configuration>

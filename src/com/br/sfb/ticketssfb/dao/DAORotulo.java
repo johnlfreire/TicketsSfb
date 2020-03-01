@@ -1,0 +1,29 @@
+package com.br.sfb.ticketssfb.dao;
+
+import static com.br.sfb.ticketssfb.dao.DAOGenerico.abrirSessao;
+import static com.br.sfb.ticketssfb.dao.DAOGenerico.getSession;
+import static com.br.sfb.ticketssfb.dao.DAOGenerico.session;
+import com.br.sfb.ticketssfb.modelo.IModelo;
+import com.br.sfb.ticketssfb.modelo.ModeloUsuario;
+import java.util.List;
+
+public class DAORotulo extends DAOGenerico {
+    @Override
+    public void adicionar(IModelo m){
+        super.adicionar(m); //To change body of generated methods, choose Tools | Templates.
+    }
+ public List<ModeloUsuario> pesquisarUsuario(String mail) {
+        try {
+            abrirSessao();
+            getSession().beginTransaction();
+            List<ModeloUsuario> usuario = session.getNamedQuery("ModeloEmail.getUsuario")
+                    .setParameter("mail",mail).list();
+            getSession().getTransaction().commit();
+            return usuario;
+        } catch (RuntimeException ex) {
+            getSession().getTransaction().rollback();
+            throw ex;
+        }
+    }
+     
+}

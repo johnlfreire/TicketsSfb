@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="645.0" prefWidth="942.0" stylesheets="@../css/HomeTickets.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.br.sfb.ticketssfb.controle.HomeTicketsController">
+   <left>
+      <VBox prefHeight="599.0" prefWidth="126.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="66.0" prefWidth="126.0">
+               <children>
+                  <Button id="imageMail" mnemonicParsing="false" prefHeight="51.0" prefWidth="71.0" style="-fx-background-color: transparent;" />
+               </children>
+            </HBox>
+            <JFXButton alignment="BASELINE_LEFT" contentDisplay="RIGHT" onAction="#todosTickes" prefWidth="119.0" text="Todos" textFill="WHITE">
+               <graphic>
+                  <Label fx:id="lbTodos" alignment="CENTER" text="1000" textFill="#fffdfd" />
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" contentDisplay="RIGHT" onAction="#meustickets" prefHeight="25.0" prefWidth="119.0" text="Meu Usuário" textFill="WHITE">
+               <graphic>
+                  <Label alignment="CENTER" text="1000" textFill="#fffdfd" />
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" contentDisplay="RIGHT" onAction="#ticketsImportantes" prefHeight="25.0" prefWidth="119.0" text="Importante" textFill="WHITE">
+               <graphic>
+                  <Label alignment="CENTER" text="1000" textFill="#fffdfd" />
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" contentDisplay="RIGHT" onAction="#ticketsRascunho" prefHeight="25.0" prefWidth="119.0" text="Rascunho" textFill="WHITE">
+               <graphic>
+                  <Label alignment="CENTER" text="1000" textFill="#fffdfd" />
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" contentDisplay="RIGHT" onAction="#TicketsSpam" prefWidth="119.0" text="Spam" textFill="WHITE">
+               <graphic>
+                  <Label alignment="CENTER" text="1000" textFill="#fffdfd" />
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" contentDisplay="RIGHT" onAction="#TicketsLixeira" prefWidth="119.0" text="Lixeira" textFill="WHITE">
+               <graphic>
+                  <Label alignment="CENTER" text="1000" textFill="#fffdfd" />
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <Pane fx:id="PaneCentralHome" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
